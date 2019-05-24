@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="manifest" href="manifest.json" />
+    <meta charset="UTF-8" />
+    <meta name="theme-color" content="#fafafa" />
+    <meta name="Description" content="Put your description here." />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="canonical" href="http://127.0.0.1:5500/" />
+    <title>2FA</title>
+
+    <link
+      href="https://fonts.googleapis.com/css?family=PT+Serif&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html {
+        font-family: 'PT Serif', serif;
+        font-size: 16px;
+        color: #222;
+      }
+
+      body {
+        margin: 0 auto;
+        padding: 1rem;
+        max-width: 1280px;
+        background: rgb(238, 174, 202);
+        background: radial-gradient(
+          circle,
+          rgba(238, 174, 202, 1) 0%,
+          rgba(148, 187, 233, 1) 100%
+        );
+      }
+
+      section {
+        border-radius: 30px;
+        box-shadow: 1px 1px 1px rgb(238, 174, 202);
+        background-color: white;
+        padding: 1rem;
+        margin: 1rem auto;
+        display: flex;
+      }
+      section > div {
+        justify-content: center;
+        align-content: center;
+      }
+
+      h1 {
+        padding: 1rem;
+      }
+      p {
+        padding: 1rem;
+        text-align: justify;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('sw.js');
+        });
+      }
+    </script>
+  </body>
+</html>
