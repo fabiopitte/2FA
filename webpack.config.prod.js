@@ -21,7 +21,8 @@ module.exports = {
     new WebpackBunbleAnalyzer.BundleAnalyzerPlugin({ analyzerMode: 'static' }),
     new CopyWebpackPlugin([
       { from: 'src/images', to: 'images/' },
-      { from: './manifest.json', to: 'manifest.json' }
+      { from: './manifest.json', to: 'manifest.json' },
+      { from: './sw.js', to: 'sw.js' }
     ]),
     new MiniCssExtractPlugin({
       filename: '[name].[contenthash].css'
