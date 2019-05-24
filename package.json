@@ -10,6 +10,7 @@
     "seo:custom": "workbox injectManifest workbox-config-custom.js",
     "seo:build": "run-p seo:default seo:custom",
     "build": "run-p clean:build && webpack --config webpack.config.prod.js",
+    "build:prod":"webpack --config webpack.config.prod.js",
     "serve:build": "http-server ./build"
   },
   "keywords": [],
